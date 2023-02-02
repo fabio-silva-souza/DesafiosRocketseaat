@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;500;600;700;800&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Manrope', sans-serif;
+}
+body
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+:root 
+{
+    --backgrond: #000;
+    --text-color: #FFF;
+    --button: #8257E5;
+    --border: #29292E;
+    --border-menu-mobile: #A8A8B3;
+    --text-color-menu-mobile: #E1E1E6;
+}
+nav
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 50px;
+    display: flex;
+    justify-content: space-evenly;
+}
+nav ul 
+{
+    display: flex;
+    width: 40%;
+    list-style: none;
+    justify-content: space-around;
+    align-items: center;
+}
+nav a
+{
+    color: var(--text-color);
+    text-decoration: none;
+}
+nav button
+{
+    width: 250px;
+    background-color: #000;
+    color: #FFF;
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    border: 2px solid var(--button);
+    border-radius: 10px;
+}
+main
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+}
+main h1
+{
+    color: #FFF;
+    font-size: 5rem;
+}
+main img:nth-child(1)
+{
+    position: absolute;
+    bottom: 0;  
+    left: 20%;   
+}
+main img:nth-child(2)
+{
+    position:absolute;
+    bottom: 0;
+    left: 0;
+}
+main img:nth-child(3)
+{
+    position:absolute;
+    top: 0;
+    right: 0;
+}
