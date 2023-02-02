@@ -75,7 +75,7 @@ main
     align-items: center;
     background: var(--main-background);
 }
-#shoesInfo
+aside
 {
     position: relative;
     display: flex;
@@ -88,21 +88,21 @@ main
     height: 100vh;
     background-color: #fff;
 }
-#shoesInfo h1
+aside h1
 {
     font-size: 2.7rem;
     padding: 20px 0 20px 0;
 }
-#shoesInfo h4
+aside h4
 {
     font-size: 1.7rem;
     padding: 20px;
 }
-#shoesInfo p
+aside p
 {
     font-size: 15px;
 }
-#shoesInfo button
+aside button
 {
     width: 220px;
     height: 70px;
