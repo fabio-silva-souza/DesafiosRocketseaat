@@ -16,24 +16,37 @@ body
     position: fixed;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     padding: 15px;
     height: 100vh;
     width: 20%;
     overflow: hidden;
     background-color: rgb(63, 215, 164);
 }
+.container.active
+{
+    width: 10%;
+}
 .menu, .logOut
 {
    display: flex;
    justify-content: space-between;
    align-items: center;
+   width: 270px;
    height: 40px; 
+}
+.logOut
+{
+    position: absolute;
+    bottom: 2%;
+}
+ul
+{
+    margin-top: 20px;
 }
 ul li
 {
     display: flex;
-
     padding: 10px;
     list-style: none;
     border-radius: 20px;

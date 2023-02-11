@@ -30,11 +30,11 @@
             <button>COMPRAR</button>
         </aside>
         <div id="shoesPhotos">
-            <img src="./S.assets/tenis-1-ampliado.png" alt="Shoes">
+            <img class="photo active" src="./S.assets/tenis-1-ampliado.png" alt="Shoes">
             <div id="shoesGalery">
-                <img src="./S.assets/tenis-1-galeria.png" alt="">
-                <img src="./S.assets/tenis-2-galeria.png" alt="">
-                <img src="./S.assets/tenis-3-galeria.png" alt="">
+                <img class="photo" src="./S.assets/tenis-1-galeria.png" alt="">
+                <img class="photo" src="./S.assets/tenis-2-galeria.png" alt="">
+                <img class="photo" src="./S.assets/tenis-3-galeria.png" alt="">
             </div>
         </div>
         </main>
@@ -53,5 +53,33 @@
             </div></a>
         </footer>
     </div>
+    <script>
+        let currentPhoto = 0;
+        
+        const photos = document.querySelectorAll(".photo");
+        photos.forEach((photo) => {
+
+                photo.addEventListener("click", () => {
+                    if(currentPhoto === photos.length - 1){
+                        currentPhoto = 0
+                    } else
+                    {
+                        currentPhoto++
+                    } 
+
+                    photo.classList.add("active");
+                    let timeRemove = setInterval( remov, 100)
+
+                    function remov(){
+                        photo.classList.remove("active")
+                    }
+                    // photos[currentPhoto].classList.add("active"); 
+                
+                })
+                
+        })
+
+
+    </script>
 </body>
 </html>

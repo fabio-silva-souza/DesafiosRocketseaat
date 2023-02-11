@@ -203,4 +203,7 @@ footer video
     padding: 5px 10px 0 10px;
 }
 
-
+.photo.active
+{
+    border: 2px solid #FF0000;
+}

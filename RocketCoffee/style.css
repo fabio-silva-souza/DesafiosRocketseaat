@@ -13,7 +13,7 @@ body
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     overflow: hidden;
 }
 :root 
@@ -48,21 +48,6 @@ nav ul
     justify-content: space-evenly;
     align-items: center;
 }
-/* nav li 
-{
-    width: 100%;
-    height: 20px;
-}
-nav ul li::before
-{
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    width: 5px;
-    background-color: #8257E5;
-} */
 nav a
 {
     width: 100%;
@@ -133,6 +118,7 @@ h1:last-child
 main img:nth-child(1)
 {
     position: relative;
+    z-index: 1;
 }
 main img:nth-child(2)
 {
@@ -146,43 +132,56 @@ main img:nth-child(3)
     top: 0;
     right: 0;
 }
-@media screen and (max-width: 800px) 
+.container img
+{
+    width: 100%;
+}
+@media (max-width: 400px) 
 {
     body
     {
+        display: flex;
+        height: 100vh;
         flex-direction: column;
+        overflow: auto;
     }
     header
     {
+        position: relative;
         height: 100vh;
         padding: 0;
-        flex-direction: column;
         background-color: #000;
+        border: #000 1px solid;
+        z-index: 2;
+    }
+    nav ul
+    {
+        flex-direction: column;
+        padding: 40px 0;
+        display: none;
     }
     nav ul li
     {
         width: 100%;
-        border-bottom: 1px solid #fff;
-    }
-    nav ul
-    {
-        top: 0;
-        left: 0;
-        height: 0;
-        width: 100%;
-        flex-direction: column;
-        transition: 0.5s;
+        height: 70px;
+        padding-top: 20px;
+        border: 0.2px solid #fff;
     }
     nav.active ul
     {
-        transition: 0.5s;
+        position: absolute;
         left: 0;
-        padding: 20px;
+        display: block;
         height: 100vh;
+        width: 100%;
+        margin-top: 60px;
+        background-color: #000;
+        z-index: 2;
     }
-    button
+    header button
     {
-        margin: auto;
+        position: absolute;
+        bottom: 0;
     }
     .logo
     {
@@ -190,13 +189,36 @@ main img:nth-child(3)
     }
     .logoMobile
     {
-        position: fixed;
-        background-color: #000;
-        top: 0;
-        left: 0;
+        display: block;
+        transition: 0.7s;
+    }
+    .menu
+    {
+        height: 75px;
+        padding: 20px;
         width: 100%;
         display: flex;
-        z-index: 1;
+        justify-content: space-between;
     }
-    
+    h2
+    {
+        padding: 60px;
+        text-align: center;
+        position: absolute;
+        font-size: 1.6rem;
+        color: #FFF;
+    }
+    main
+    {
+        border: #000 1px solid; 
+    }
+    main h1
+    {
+        font-size: 3rem;
+    }
+    main img:nth-child(3)
+    {
+        top: 100px;
+    }
+
 }
