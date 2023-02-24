@@ -1,0 +1,115 @@
+* 
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+:root {
+  --purple-bg: #290742;
+  --dark-bg: #170027;
+  --button-bg: #9e6dc2;
+  --white: #fff;
+  --light-purple: #fbf6ff;
+  --green: #4fff4b;
+}
+
+body
+{
+  position: relative;
+  width: 100%;
+}
+section
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color:var(--purple-bg);
+}
+a
+{
+  text-decoration: none;
+  color: #ffffff9e;
+  transition: 0.2s;
+}
+a:hover
+{
+  color: #fff;
+  transition: 0.2s;
+}
+header
+{
+  display: flex;
+  padding: 10px;
+  width: 100%;
+  align-items: center;
+  justify-content: space-around;
+}
+header h3
+{
+  color: #fff;
+  font-weight: 700;
+}
+header span
+{
+  color: #4fff4b;
+}
+nav
+{
+  display: flex;
+  width: 50%;
+  justify-content: space-evenly;
+}
+input
+{
+  height: 35px;
+  background-color: var(--dark-bg);
+}
+input~span
+{
+  width: 35px;
+  height: 35px;
+  padding: 8px 13px 8px 13px;
+  background-color: var(--button-bg);
+}
+article
+{
+  padding: 50px;
+}
+article h1
+{
+  font-weight: 700;
+} 
+article p
+{
+  padding: 20px 0 10px 0;
+} 
+.card-header
+{
+  display: flex;
+  padding: 0 100px 0 100px;
+  color: #fff;
+}
+.card-header img 
+{
+  padding: 50px;
+}
+
+main
+{
+  display: flex;
+  flex-direction: column;
+  border-top: #4fff4b 5px solid;
+  padding: 70px 120px 70px 120px;
+}
+main .container-first
+{
+  width: 100%;
+  display: flex;
+}
+
+h4
+{
+  font-weight: 600;
+}
