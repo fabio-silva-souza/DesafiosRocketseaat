@@ -33,19 +33,33 @@ a
   color: #ffffff9e;
   transition: 0.2s;
 }
-/* nav a::before
+nav a
+{
+  position: relative;
+  margin: 20px;
+  width: 100px;
+  padding-left: 10px;
+}
+nav a::before
 {
   content: '';
   position: absolute;
-  height: 20px;
+  height: 25px;
   width: 4px;
+  left: 0;
   border-radius: 20px;
   background-color: #4fff4b;
-
-} */
+  transition: 0.2s;
+  opacity: 0;
+} 
 a:hover
 {
   color: #fff;
+  transition: 0.2s;
+}
+a:hover::before
+{
+  opacity: 1;
   transition: 0.2s;
 }
 header
@@ -123,7 +137,6 @@ article p
 {
   padding: 50px;
 }
-
 main
 {
   display: flex;
@@ -161,4 +174,9 @@ h4
   padding: 15px 0 15px 0;
   font-weight: 600;
   color: var(--purple-bg);
+}
+::selection
+{
+  color: #4fff4b;
+  background-color: #290742;
 }
