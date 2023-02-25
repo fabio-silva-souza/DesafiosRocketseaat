@@ -33,6 +33,16 @@ a
   color: #ffffff9e;
   transition: 0.2s;
 }
+/* nav a::before
+{
+  content: '';
+  position: absolute;
+  height: 20px;
+  width: 4px;
+  border-radius: 20px;
+  background-color: #4fff4b;
+
+} */
 a:hover
 {
   color: #fff;
@@ -57,21 +67,38 @@ header span
 }
 nav
 {
+  position: relative;
   display: flex;
   width: 50%;
   justify-content: space-evenly;
 }
 input
 {
-  height: 35px;
+  width: 240px;
+  height: 40px;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 0 10px;
   background-color: var(--dark-bg);
 }
 input~span
 {
-  width: 35px;
-  height: 35px;
-  padding: 8px 13px 8px 13px;
+  position: absolute;
+  width: 45px;
+  height: 40px;
+  border-radius: 5px;
+  text-align: center;
+  padding: 5px;
+  right: 0;
   background-color: var(--button-bg);
+}
+form
+{
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 240px;
 }
 article
 {
@@ -80,6 +107,7 @@ article
 article h1
 {
   font-weight: 700;
+  color: var(--button-bg);
 } 
 article p
 {
@@ -106,10 +134,31 @@ main
 main .container-first
 {
   width: 100%;
-  display: flex;
+  display: grid;
+  grid-template-columns: 500px 500px;
+  grid-template-rows: 350px 300px;
+  grid-auto-flow: column;
+  justify-content: space-around;
+}
+main .container-second
+{
+  width: 100%;
+  display: grid;
+  grid-template-columns: 300px 300px 300px;
+  grid-template-rows: 300px 300px;
+  grid-auto-flow: row;
+  justify-content: space-around;
+}
+
+main span
+{
+  font-weight: 600;
+  font-size: 13px;
 }
 
 h4
 {
+  padding: 15px 0 15px 0;
   font-weight: 600;
+  color: var(--purple-bg);
 }
