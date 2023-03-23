@@ -111,7 +111,7 @@ aside button
     background-color: var(--button);
     border: none;
 }
-#shoesPhotos
+#shoesPhoto
 {
     position: relative;
     right: 0;
@@ -122,7 +122,7 @@ aside button
     justify-content: center;
     align-items: center;
 }
-#shoesPhotos img
+#shoesPhoto img
 {
     /* padding: 150px; */
     width: 500px;
@@ -142,7 +142,7 @@ aside button
     width: 80%;
     height: 150px;
 }
-footer
+.menuFooter
 {
     position: fixed;
     bottom: 0;
@@ -154,7 +154,7 @@ footer
     align-items: center;
     background-color: var(--main-background);
 }
-footer a
+.menuFooter a
 {
     text-decoration: none;
     font-size: 14px;
@@ -162,7 +162,7 @@ footer a
     color: var(--text);
     text-transform: uppercase;
 }
-footer video
+.menuFooter video
 {
     height: 100px;
 }
@@ -202,8 +202,8 @@ footer video
 {
     padding: 5px 10px 0 10px;
 }
-
-.photo.active
+.photo:hover
 {
-    border: 2px solid #FF0000;
+    border-bottom: 4px solid #FF0000;
 }
+
