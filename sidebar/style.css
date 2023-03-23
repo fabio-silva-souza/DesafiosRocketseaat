@@ -3,63 +3,145 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    list-style: none;
+    font-family: 'Roboto', sans-serif;
 }
+
+:root {
+    --body-bg-color: #dce4e3;
+    --green: #18c29c;
+    --light-green: #8ed7c6;
+      --light-grey: #dce4e3;
+    --text-color: #084236;
+  }
+
 body
 {
-    position: relative;
-    font-family: 'Roboto', sans-serif;
-    overflow: hidden;
-    min-height: 100vh;
-}
-.container
-{
-    position: fixed;
     display: flex;
-    flex-direction: column;
-    /* justify-content: space-between; */
-    padding: 15px;
     height: 100vh;
-    width: 20%;
-    overflow: hidden;
-    background-color: rgb(63, 215, 164);
+    color: var(--text-color);
 }
-.container.active
+
+h2
 {
-    width: 10%;
+    padding: 20px;
 }
-.menu, .logOut
+
+img
 {
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
-   width: 270px;
-   height: 40px; 
+    width: 28px;
 }
-.logOut
+
+button
 {
     position: absolute;
-    bottom: 2%;
+    width: 80px;
+    height: 100%;
+    background-color: var(--green);
+    border: none;
+    right: 0;
+    cursor: pointer;
+    z-index: 10;
 }
-ul
+
+button img
 {
-    margin-top: 20px;
+    width: 40%;
 }
-ul li
+
+input[type="text"],
+input:focus
+{
+    background-color: transparent;
+    border: none;
+    font-size: 16px;
+    outline: none;
+}
+
+nav
+{
+    width: 100%;
+    padding: 5px;
+}
+ul li  
 {
     display: flex;
-    padding: 10px;
-    list-style: none;
+    align-items: center;
+    height: 60px;
+    padding: .5em;
+    margin: 5px 0 5px 0;
     border-radius: 20px;
-    width: 80%;
-    background-color: rgba(145, 255, 220, 0.879);
-    margin: 5px;
 }
+ul li:first-child,
+ul li:hover
+{
+    cursor: pointer;
+    background-color: var(--light-green);
+}  
 ul li span
 {
-    margin: 5px 10px;
+    margin: 10px 30px 10px 10px;
 }
-img
+
+img[alt="photo"]
 {
     border-radius: 15px;
     width: 70px;
+}
+
+#sidebar
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    width: 5%;
+    overflow: hidden;
+    transition: .4s;
+    background-color: var(--green);
+}
+
+
+.headerBar
+{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    height: 60px;
+    width: 100%;
+}
+
+.logOut
+{
+    display: flex;
+    align-items: center;
+    padding: .5em;
+    background-color: var(--light-green);
+}
+
+.logOut img
+{
+    margin: 6px;
+}
+
+.logOut button
+{
+    background-color: var(--light-green);
+}
+
+.user
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.user span:last-child
+{
+    margin: 5px;
+    font-size: 10px;
+}
+
+.headerBar, .logOut
+{
+    position: relative;
 }
